@@ -1,0 +1,11 @@
+---
+applications:
+- name: agar-clone
+  memory: 512M
+  disk_quota: 1G
+  buildpack: nodejs_buildpack
+  host: agar-clone
+  domain: mybluemix.net
+  timeout: 180
+  env:
+    NPM_CONFIG_PRODUCTION: false
