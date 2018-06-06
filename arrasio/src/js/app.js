@@ -385,7 +385,7 @@ var gui = {
             softcap: 1,
         }
     ],
-    points: 0,
+    points: 1,
     upgrades: [],
     playerid: -1,
     __s: (() => {
