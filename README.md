@@ -1,2 +1,1 @@
-# arrasio
-A fan-made sequel to diep.io
+A bot that mutes users by deleting their messages
