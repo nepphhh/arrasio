@@ -1485,34 +1485,29 @@ class Gun {
         o.source = this.body;
         o.facing = o.velocity.direction;
         // Necromancers.
-        if (this.calculator == 'necro') {
-            let oo = o;
-            o.necro = host => {
-                let shootPermission = (this.countsOwnKids) ?
-                    this.countsOwnKids > this.children.length * 
-                    ((this.bulletStats === 'master') ? this.body.skill.rld : this.bulletStats.rld)
-                : (this.body.maxChildren) ?
-                    this.body.maxChildren > this.body.children.length * 
-                    ((this.bulletStats === 'master') ? this.body.skill.rld : this.bulletStats.rld)
-                : true;   
-                if (shootPermission) {
-                    let save = {
-                        facing: host.facing,
-                        size: host.SIZE,
-                    };
-                    host.define(Class.genericEntity);
-                    this.bulletInit(host);
-                    host.team = oo.master.master.team;
-                    host.master = oo.master;
-                    host.color = oo.color;
-                    host.facing = save.facing;
-                    host.SIZE = save.size;
-                    host.health.amount = host.health.max;
-                    return true;
-                }
-                return false;
-            };
-        }
+		let oo = o;
+		o.necro = host => {
+			let shootPermission = (this.countsOwnKids) ? this.countsOwnKids > this.children.length *
+				((this.bulletStats === 'master') ? this.body.skill.rld : this.bulletStats.rld) :
+				(this.body.maxChildren) ? this.body.maxChildren > this.body.children.length *
+				((this.bulletStats === 'master') ? this.body.skill.rld : this.bulletStats.rld) : true;
+			if (shootPermission) {
+				let save = {
+					facing: host.facing,
+					size: host.SIZE
+				};
+				host.define(Class.genericEntity);
+				this.bulletInit(host);
+				host.team = oo.master.master.team;
+				host.master = oo.master;
+				host.color = oo.color;
+				host.facing = save.facing;
+				host.SIZE = save.size;
+				host.health.amount = host.health.max;
+				return true;
+			}
+			return false;
+		};
         // Otherwise
         o.refreshBodyAttributes();
         o.life();
