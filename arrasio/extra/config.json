@@ -42,7 +42,7 @@
     0.005,
     0
   ],
-  "MAX_SKILL": 9,
+  "MAX_SKILL": 7,
   "SOFT_MAX_SKILL": 0.56,
   "TIER_1": 10,
   "TIER_2": 25,
@@ -52,8 +52,8 @@
   "SKILL_CHEAT_CAP": 45,
   "SKILL_LEAK": 0,
   "STEALTH": 4,
-  "MIN_SPEED": 0.001,
+  "MIN_SPEED": 0.003,
   "FOOD_AMOUNT": 1.5, 
-  "SKILL_BOOST": 5,
-  "BOTS": 0
+  "SKILL_BOOST": 6,
+  "BOTS": 100
 }
