@@ -1,14 +1,12 @@
 {
-  "name": "efrost-arras",
-  "version": "1.0.0",
-  "main": "arrasio/src/server/server.js",
+  "name": "discord-1337-bot",
+  "version": "0.0.1",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "google-closure-library": "^20180506.0.0",
-    "uws": "9.148.x",
-    "eris": "^0.8.6"
+    "eris": "^0.7.2"
   },
   "engines": {
     "node": "8.x"
