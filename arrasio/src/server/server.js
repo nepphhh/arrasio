@@ -1485,16 +1485,13 @@ class Gun {
         o.source = this.body;
         o.facing = o.velocity.direction;
         // Necromancers.
-        if (this.calculator == 'necro') {
+        if (this.calculator == 7) {
             let oo = o;
             o.necro = host => {
-                let shootPermission = (this.countsOwnKids) ?
-                    this.countsOwnKids > this.children.length * 
-                    ((this.bulletStats === 'master') ? this.body.skill.rld : this.bulletStats.rld)
-                : (this.body.maxChildren) ?
-                    this.body.maxChildren > this.body.children.length * 
-                    ((this.bulletStats === 'master') ? this.body.skill.rld : this.bulletStats.rld)
-                : true;   
+                let shootPermission = this.countsOwnKids ? this.countsOwnKids > this.children.length *
+					(this.bulletStats === 'master' ? this.body.skill.rld : this.bulletStats.rld) :
+					this.body.maxChildren ? this.body.maxChildren > this.body.children.length *
+					(this.bulletStats === 'master' ? this.body.skill.rld : this.bulletStats.rld) : true;
                 if (shootPermission) {
                     let save = {
                         facing: host.facing,
