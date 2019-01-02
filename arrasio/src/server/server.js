@@ -194,6 +194,10 @@ var keys = [
         'FrostyAndBeautifulJustLikeYourColdHeart',
 ];
 
+if (!c.TOKEN_REQUIRED) {
+  keys.push("")
+}
+
 // Set up room.
 global.fps = "Unknown";
 var roomSpeed = c.gameSpeed;
@@ -3028,7 +3032,7 @@ const sockets = (() => {
                     util.remove(connectedIPs, n);
                 }
                 // Free the token
-                if (socket.key != '') { 
+                if (socket.key != '' && c.TOKEN_REQUIRED) { 
                     keys.push(socket.key);
                     util.log("Token freed.");
                 }   
@@ -3102,7 +3106,7 @@ const sockets = (() => {
                     if (key.length > 64) { socket.kick('Overly-long key offered.'); return 1; }
                     if (socket.status.verified) { socket.kick('Duplicate player spawn attempt.'); return 1; }
                     // Otherwise proceed to check if it's available.
-                    if (keys.indexOf(key) != -1) {
+                    if (keys.indexOf(key) != -1 || !c.TOKEN_REQUIRED) {
                         // Save the key
                         socket.key = key.substr(0, 64);
                         // Make it unavailable
