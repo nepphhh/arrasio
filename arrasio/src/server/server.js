@@ -1,6 +1,7 @@
 /*jslint node: true */
 /*jshint -W061 */
 /*global goog, Map, let */
+/*jshint esversion: 6 */
 "use strict";
 
 // General requires
@@ -288,6 +289,9 @@ const room = {
         return output;
     };
     room.isIn = (type, location) => {
+	if (location.x == null || location.y == null || isNaN(location.x) || isNaN(location.y)) {
+	    throw "InvalidPositionError"
+	}
         if (room.isInRoom(location)) {
             let a = Math.floor(location.y * room.ygrid / room.height);
             let b = Math.floor(location.x * room.xgrid / room.width);
