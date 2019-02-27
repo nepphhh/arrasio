@@ -25,7 +25,7 @@
   "HEIGHT": 2000,
   "MODE": "tdm",
   "RANDOM_COLORS": false,
-  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/gi", 
+  "BANNED_CHARACTER_REGEX": "/[\uFDFD\u200E\u0000]/giu", 
   "ROOM_SETUP": [
     [ "roid", "norm", "norm", "roid" ],
     [ "norm", "nest", "roid", "norm" ],
