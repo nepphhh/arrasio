@@ -3126,7 +3126,7 @@ const sockets = (() => {
                     if (!socket.status.deceased) { socket.kick('Trying to spawn while already alive.'); return 1; }
                     if (m.length !== 2) { socket.kick('Ill-sized spawn request.'); return 1; }
                     // Get data
-										let regex = new RegExp(c.BANNED_REGEX_BODY, c.BANNED_REGEX_FLAGS)
+		    let regex = new RegExp(c.BANNED_REGEX_BODY, c.BANNED_REGEX_FLAGS)
                     let name = m[0].replace(regex, '');
                     let needsRoom = m[1];
                     // Verify it
