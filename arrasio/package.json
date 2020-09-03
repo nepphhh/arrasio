@@ -18,7 +18,7 @@
     "chai": "^3.5.0",
     "express": "^4.13.4",
     "fs": "^0.0.2",
-    "google-closure-library": "^20170910.0.0",
+    "google-closure-library": "^20200830.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-jshint": "^2.0.1",
