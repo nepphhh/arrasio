@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Properties -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="description" content="A world where there are tanks... and bosses... But who creates them? Gods live among other tanks. Basically it's a sequel to Diep.io and arras.io. Many tanks! Now with colored names and membership">
+  <meta name="robots" content="index, follow">
+  <meta property="og:image" content="https://cdn.glitch.com/c7193968-ff77-4c4f-a959-6ddbcbaf9161%2Fa359c21f-7b61-4df0-8da6-f6153217e97b.image.png?v=1605732578506">
+  <meta property="og:image:width" content="54">
+  <meta property="og:image:height" content="54">
+  <title>Arrasian.io</title>
+  <!-- JS -->
+ <!-- <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-120544149-1"></script>
+  <script async src="//api.adinplay.com/libs/aiptag/pub/ACX/arras.io/tag.min.js"></script> -->
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  <script>
+  var aiptag = aiptag || {};
+  aiptag.cmd = aiptag.cmd || [];
+  aiptag.cmd.display = aiptag.cmd.display || [];  aiptag.cmd.player = aiptag.cmd.player || [];
+  aiptag.gdprShowConsentTool = true;
+  </script>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="256x256" href="https://cdn.glitch.com/7dbf6763-6e4a-4039-97a3-0612137943f7%2F73d4eeed-1a4f-4359-87af-e41ff5aa986d.image.png?v=1606955562675">
+  <meta name="theme-color" content="#8abc3f">
+</head>
+<!https://discordapp.com/oauth2/authorize?client_id=427927499071160320&redirect_uri=http%3A%2F%2Farras.io%2Fcallback&response_type=code&scope=identify%20email -->
+<body oncontextmenu="return event.target.tagName === 'A'">
+  <div id="gameAreaWrapper">
+    <canvas id="gameCanvas" tabindex="1"></canvas>
+    <div id="respawn-banner" class="respawn-banner"><div id="arras-io_728x90"></div></div>
+  </div>
+  <div id="mainWrapper">
+    <div id="startMenuWrapper">
+      <div class="menuTabs">
+        <!--<a class="menuTab discord" style= "background: #8b0000" href="https://donatebot.io/checkout/427668515357458443"></a>-->
+      </div>
+            <div id="startMenu">
+            <div id="twitterHolder" class="startMenuHolder">
+            <iframe id="patchNotesIFrame" src="visitcounter.html" seamless='seamless'  width="350"height="300" frameBorder="0">Every visit the game gets!</iframe>                   <div id="bottomHolder">
+          <a style="background:cactus" href="https://arras.io/">Arras.io</a>
+              <a style="background:purple" href="https://glitch.com/edit/#!/arrasian-template?path=Guide.md%3A17%3A13/">Client Template</a>
+               <a style="background:blue" href="https://discord.gg/N9XhNpJf5M">Discord</a>
+              </div>
+        </div>
+        <div class="startMenuHolder">
+          <div class="sliderHolder">
+            <div class="slider startMenuSlidingContent">
+              <center><img src="https://cdn.glitch.com/7dbf6763-6e4a-4039-97a3-0612137943f7%2F73d4eeed-1a4f-4359-87af-e41ff5aa986d.image.png?v=1606955562675" class="icon" alt="arras icon"></center>
+              <h1>Arrasian.io</h1>
+              <div class="serverSelector shadowScroll"><table><tbody id="serverSelector"></tbody></table></div>
+              <input type="text" autofocus tabindex="1" spellcheck="false" placeholder="This is the life of..." id="playerNameInput" maxlength="28">
+              <input type="password" tabindex="1" placeholder="Token(Beta testers only)" id="playerKeyInput" maxlength="48">
+            <div class="bottomHolder">
+            </div>
+            </div>
+              <div class="slider" id="startMenuSlidingTrigger">
+              <h3 class="nopadding">
+                <span id="viewOptionText">view options</span>&nbsp;&nbsp;<i class="arrow" id="optionArrow" style="transform:rotate(-45deg);-webkit-transform:rotate(-45deg)"></i>
+              </h3>
+            </div>
+            <div class="slider startMenuSlidingContent">
+              <div class="controlTable optionsHeader">Advanced Controls <i id="resetControls" class="reset resetControls" title="Reset controls"></i><i id="moreControls" class="moreControls cross" title="More controls"></i></div>
+              <table class="controlTable" id="controlTable">
+                <tbody>
+                  <tr>
+                    <td><div><b data-key="KEY_AUTO_FIRE">E</b><span> - </span>auto-fire</div></td>
+                    <td><div><b data-key="KEY_AUTO_SPIN">C</b><span> - </span>auto-spin</div></td>
+                    <td><div><b data-key="KEY_OVER_RIDE">R</b><span> - </span>disable AI</div></td>
+                  </tr>
+                  <tr>
+                    <td><div><b data-key="KEY_LEVEL_UP">N</b><span> - </span>level up</div></td>
+                    <td><div><b data-key="KEY_REVERSE_TANK">V</b><span> - </span>reverse tank</div></td>
+                    <td><div><b data-key="KEY_REVERSE_MOUSE">B</b><span> - </span>reverse mouse</div></td>
+                  </tr>
+                  <tr>
+                    <td><div><b data-key="KEY_SCREENSHOT">Q</b><span> - </span>screenshot</div></td>
+                    <td><div><b data-key="KEY_UPGRADE_MAX">M</b><span> - </span>maximize stat</div></td>
+                    <td><div><b data-key="KEY_CLASS_TREE">T</b><span> - </span>show class tree</div></td>
+                  </tr>
+                  <tr class="hidden">
+                    <td><div><b data-key="KEY_RECORD">Z</b><span> - </span>record video</div></td>
+                    <td><div><b data-key="KEY_UP">W</b><span> - </span>move up</div></td>
+                    <td><div><b data-key="KEY_PING">L</b><span> - </span>show latency</div></td>
+                  </tr>
+                  <tr class="hidden">
+                    <td><div><b data-key="KEY_LEFT">A</b><span> - </span>move left</div></td>
+                    <td><div><b data-key="KEY_DOWN">S</b><span> - </span>move down</div></td>
+                    <td><div><b data-key="KEY_RIGHT">D</b><span> - </span>move right</div></td>
+                  </tr>
+                  <tr class="hidden">
+                    <td><div><b data-key="KEY_CHOOSE_1" data-help="KEY_CHOOSE_1">Y</b><span> - </span>upgrade 1</div></td>
+                    <td><div><b data-key="KEY_CHOOSE_2" data-help="KEY_CHOOSE_2">U</b><span> - </span>upgrade 2</div></td>
+                    <td><div><b data-key="KEY_CHOOSE_3" data-help="KEY_CHOOSE_3">I</b><span> - </span>upgrade 3</div></td>
+                  </tr>
+                  <tr class="hidden">
+                    <td><div><b data-key="KEY_CHOOSE_4" data-help="KEY_CHOOSE_4">H</b><span> - </span>upgrade 4</div></td>
+                    <td><div><b data-key="KEY_CHOOSE_5" data-help="KEY_CHOOSE_5">J</b><span> - </span>upgrade 5</div></td>
+                    <td><div><b data-key="KEY_CHOOSE_6" data-help="KEY_CHOOSE_6">K</b><span> - </span>upgrade 6</div></td>
+                  </tr>
+                  <tr class="hidden">
+                    <td><div><b data-key="KEY_CHOOSE_7" data-help="KEY_CHOOSE_7"></b><span> - </span>upgrade 7</div></td>
+                    <td><div><b data-key="KEY_CHOOSE_8" data-help="KEY_CHOOSE_8"></b><span> - </span>upgrade 8</div></td>
+                    <td><div><b data-key="KEY_CHOOSE_9" data-help="KEY_CHOOSE_9"></b><span> - </span>upgrade 9</div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="optionsHeader">Themes & Graphics</div>
+              <select id="optColors" tabindex="-1" onchange="document.getElementById('optCustom').style.display = this.value === 'custom' ? 'block' : 'none'" onfocus="document.getElementById('optCustom').style.display = this.value === 'custom' ? 'block' : 'none'">
+                <option value="classic">Classic</option>
+              </select>
+              <select id="optMobile" tabindex="-1">
+                <option value="joysticks">Joysticks</option>
+                <option value="desktop">Desktop</option>
+              </select>
+              <select id="optBorders" tabindex="-1">
+                <option value="normal">Soft Borders</option>
+                <option value="dark">Dark Borders</option>
+                <option value="neon">Neon Mode</option>
+                <option value="glass">Glass Mode</option>
+              </select>
+              <input id="optCustom" style="display:none" placeholder="Enter your theme code here">
+              <table>
+                <tr>
+                  <td><div>
+                    <label class="container"><input id="optScreenshotMode" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Screenshot Mode</label>
+                  </div></td>
+                  <td><div>
+                    <label class="container"><input id="optNoPointy" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Classic Traps</label>
+                  </div></td>
+                </tr><tr>
+                  <td><div>
+                    <label class="container"><input id="optFancy" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Low Graphics</label>
+                  </div></td>
+                  <td><div>
+                    <label class="container"><input id="optShield" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Separate Shield Bar</label>
+                  </div></td>
+                </tr><tr>
+                  <td><div>
+                    <label class="container"><input id="optAutoLevel" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Auto-Level Up</label>
+                  </div></td>
+                  <td><div>
+                    <label class="container"><input id="optPrediction" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Use New Interpolation</label>
+                  </div></td>
+                </tr><tr>
+                  <td><div>
+                    <label class="container"><input id="optPointy" tabindex="-1" class="checkbox" type="checkbox"><span class="checkmark"></span>Sharp Edges</label>
+                  </div></td>
+                </tr>
+              </table>
+              <div id="bottomHolder">
+          </div>
+            </div>
+          </div>
+          <div style="position: relative; bottom: -10px;">
+            <button id="startButton" tabindex="2">Play</button>
+          </div>
+        </div>
+        <div class="startMenuHolder shrinkable">
+          <div class="changelogSelectorContainer">
+            <div class="changelogSelector" id="changelogSelector">
+            <span data-type="changelog" title="Every single update">Changelog</span>
+            </div>
+          </div>
+          <div id="patchNotes" class="shadowScroll updates"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JS -->
+ <script>
+  window.onerror = function(message, source, lineno, colno, error) {
+    window.onerror = null
+    if (error) error = error.toString()
+    console.warn('The game crashed, refreshing page to recover from error')
+    if (error == null && lineno == 0 && colno == 0) return
+    var e = JSON.stringify({
+      message: message,
+      source: source,
+      lineno: lineno,
+      colno: colno,
+      error: error
+    })
+    prompt('The game may have crashed, refresh the page to recover from error. If this is a private server, make sure to check the changelog for any server updates. Error information:', e)
+  }
+  </script>
+  <script src="./bundle.js?1577642780550"></script>
+  </body>
+</html>
