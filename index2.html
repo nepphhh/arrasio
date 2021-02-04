@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Properties -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="Don't ask why. Ask why not?" />
+    <meta name="robots" content="index, follow" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png"
+    />
+    <meta
+      property="og:image"
+      content="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arraslogo.png"
+    />
+    <meta property="og:image:width" content="80" />
+    <meta property="og:image:height" content="80" />
+    <title>arras.io</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: "freude-regular";
+        src: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/Freude.otf")
+          format("opentype");
+        font-style: normal;
+      }
+      body {
+        font-family: freude-regular;
+        padding: 10px;
+        background: #f1f1f1;
+        background-image: url("https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/tilebg.png");
+        background-color: #fab6ee;
+
+        -webkit-animation: slide 300s infinite;
+      }
+      @-webkit-keyframes slide {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 35550px 0px;
+        }
+      }
+
+      /* Header/Blog Title */
+      .header {
+        padding: 30px;
+        text-align: center;
+        background-image: url("https://res.cloudinary.com/road6943/image/upload/v1538771066/Arras/grid.png");
+        background-position: center; /* Center the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+      }
+      .header h1 {
+        font-size: 50px;
+        color: #b493d3;
+         text-shadow: 2px 2px #9371b0;
+        font-family: freude-regular;
+      }
+      /* Style the top navigation bar */
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      /* Style the topnav links */
+      .topnav a {
+        float: center;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      /* Change color on hover */
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      /* Create two unequal columns that floats next to each other */
+      /* Left column */
+
+      /* Fake image */
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      /* Add a card effect for articles */
+      .card {
+        background-color: #ffd1f7;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 100px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: black;
+        margin-top: 20px;
+      }
+      .sticker-container {
+        position: absolute;
+        bottom: 190px;
+        margin: 0px 60px;
+      }
+
+      .sticker-container.left {
+        left: 0px;
+      }
+
+      .sticker-container.right {
+        right: 0px;
+      }
+
+      .sticker {
+        display: inline-block;
+        position: relative;
+      }
+
+      .sticker:hover {
+        animation: float 450ms linear both;
+        transition-timing-function:         ease-in-out;
+      }
+      @keyframes float {
+        0% {
+          transform: translatey(0px);
+        }
+        10% {
+          transform: translatey(-10px);
+        }
+        20% {
+          transform: translatey(-20px);
+        }
+        30% {
+          transform: translatey(-40px);
+        }
+        40% {
+          transform: translatey(-20px);
+        }
+        50% {
+          transform: translatey(-0px);
+        }
+        60% {
+          transform: translatey(-7px);
+        }
+        70% {
+          transform: translatey(-5px);
+        }
+        80% {
+          transform: translatey(-3px);
+        }
+        100% {
+          transform: translatey(0px);
+        }
+      }
+      .sticker img {
+        position: relative;
+        margin: 25px 0px;
+      }
+       .sticker:active {
+        animation: pfpDefault 400ms linear both;
+      }
+      .icon {
+        display: block;
+        animation: pfpDefault 800ms linear both;
+      }
+
+      .icon:hover {
+        animation: pfpHoverOn 800ms linear both;
+      }
+
+      .icon:active {
+        animation: pfpDefault 400ms linear both;
+      }
+      @keyframes pfpHoverOn {
+        0% {
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+        3.4% {
+          transform: matrix3d(
+            1.032,
+            0,
+            0,
+            0,
+            0,
+            1.041,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        4.7% {
+          transform: matrix3d(
+            1.045,
+            0,
+            0,
+            0,
+            0,
+            1.06,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        6.81% {
+          transform: matrix3d(
+            1.066,
+            0,
+            0,
+            0,
+            0,
+            1.089,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        9.41% {
+          transform: matrix3d(
+            1.088,
+            0,
+            0,
+            0,
+            0,
+            1.117,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        10.21% {
+          transform: matrix3d(
+            1.094,
+            0,
+            0,
+            0,
+            0,
+            1.123,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        13.61% {
+          transform: matrix3d(
+            1.112,
+            0,
+            0,
+            0,
+            0,
+            1.133,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        14.11% {
+          transform: matrix3d(
+            1.114,
+            0,
+            0,
+            0,
+            0,
+            1.133,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        17.52% {
+          transform: matrix3d(
+            1.121,
+            0,
+            0,
+            0,
+            0,
+            1.124,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        18.72% {
+          transform: matrix3d(
+            1.121,
+            0,
+            0,
+            0,
+            0,
+            1.119,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        21.32% {
+          transform: matrix3d(
+            1.12,
+            0,
+            0,
+            0,
+            0,
+            1.107,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        24.32% {
+          transform: matrix3d(
+            1.115,
+            0,
+            0,
+            0,
+            0,
+            1.096,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        25.23% {
+          transform: matrix3d(
+            1.113,
+            0,
+            0,
+            0,
+            0,
+            1.094,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        29.03% {
+          transform: matrix3d(
+            1.106,
+            0,
+            0,
+            0,
+            0,
+            1.09,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        29.93% {
+          transform: matrix3d(
+            1.105,
+            0,
+            0,
+            0,
+            0,
+            1.09,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        35.54% {
+          transform: matrix3d(
+            1.098,
+            0,
+            0,
+            0,
+            0,
+            1.096,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        36.74% {
+          transform: matrix3d(
+            1.097,
+            0,
+            0,
+            0,
+            0,
+            1.098,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        41.04% {
+          transform: matrix3d(
+            1.096,
+            0,
+            0,
+            0,
+            0,
+            1.102,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        44.44% {
+          transform: matrix3d(
+            1.097,
+            0,
+            0,
+            0,
+            0,
+            1.103,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        52.15% {
+          transform: matrix3d(
+            1.099,
+            0,
+            0,
+            0,
+            0,
+            1.101,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        59.86% {
+          transform: matrix3d(
+            1.101,
+            0,
+            0,
+            0,
+            0,
+            1.099,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        63.26% {
+          transform: matrix3d(
+            1.101,
+            0,
+            0,
+            0,
+            0,
+            1.099,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        75.28% {
+          transform: matrix3d(
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        85.49% {
+          transform: matrix3d(
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        90.69% {
+          transform: matrix3d(
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        100% {
+          transform: matrix3d(
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+      }
+
+      @keyframes pfpDefault {
+        0% {
+          transform: matrix3d(
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1.1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        3.4% {
+          transform: matrix3d(
+            1.068,
+            0,
+            0,
+            0,
+            0,
+            1.059,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        4.7% {
+          transform: matrix3d(
+            1.055,
+            0,
+            0,
+            0,
+            0,
+            1.04,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        6.81% {
+          transform: matrix3d(
+            1.034,
+            0,
+            0,
+            0,
+            0,
+            1.011,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        9.41% {
+          transform: matrix3d(
+            1.012,
+            0,
+            0,
+            0,
+            0,
+            0.983,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        10.21% {
+          transform: matrix3d(
+            1.006,
+            0,
+            0,
+            0,
+            0,
+            0.977,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        13.61% {
+          transform: matrix3d(
+            0.988,
+            0,
+            0,
+            0,
+            0,
+            0.967,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        14.11% {
+          transform: matrix3d(
+            0.986,
+            0,
+            0,
+            0,
+            0,
+            0.967,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        17.52% {
+          transform: matrix3d(
+            0.979,
+            0,
+            0,
+            0,
+            0,
+            0.976,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        18.72% {
+          transform: matrix3d(
+            0.979,
+            0,
+            0,
+            0,
+            0,
+            0.981,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        21.32% {
+          transform: matrix3d(
+            0.98,
+            0,
+            0,
+            0,
+            0,
+            0.993,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        24.32% {
+          transform: matrix3d(
+            0.985,
+            0,
+            0,
+            0,
+            0,
+            1.004,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        25.23% {
+          transform: matrix3d(
+            0.987,
+            0,
+            0,
+            0,
+            0,
+            1.006,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        29.03% {
+          transform: matrix3d(
+            0.994,
+            0,
+            0,
+            0,
+            0,
+            1.01,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        29.93% {
+          transform: matrix3d(
+            0.995,
+            0,
+            0,
+            0,
+            0,
+            1.01,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        35.54% {
+          transform: matrix3d(
+            1.002,
+            0,
+            0,
+            0,
+            0,
+            1.004,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        36.74% {
+          transform: matrix3d(
+            1.003,
+            0,
+            0,
+            0,
+            0,
+            1.002,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        41.04% {
+          transform: matrix3d(
+            1.004,
+            0,
+            0,
+            0,
+            0,
+            0.998,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        44.44% {
+          transform: matrix3d(
+            1.003,
+            0,
+            0,
+            0,
+            0,
+            0.997,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        52.15% {
+          transform: matrix3d(
+            1.001,
+            0,
+            0,
+            0,
+            0,
+            0.999,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        59.86% {
+          transform: matrix3d(
+            0.999,
+            0,
+            0,
+            0,
+            0,
+            1.001,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        63.26% {
+          transform: matrix3d(
+            0.999,
+            0,
+            0,
+            0,
+            0,
+            1.001,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          );
+        }
+        75.28% {
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+        85.49% {
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+        90.69% {
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+        100% {
+          transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+      }
+
+      h1 {
+        padding: 0;
+        margin: 0;
+        font-weight: bold;
+        color: black;
+
+        letter-spacing: 1px;
+        text-align: center;
+        font: bold 40px/1.1 freude-regular;
+      }
+      h2 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+         h3 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+         h4 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+      h5 {
+        padding: 22px;
+        margin: 0;
+        text-align: center;
+      }
+      .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+      iframe {
+        display: block;
+        margin: 0 auto;
+      }
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 400px) {
+        .topnav a {
+          float: none;
+          width: 100%;
+        }
+      }
+    </style>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/arras.png"
+    />
+    <meta name="theme-color" content="#8abc3f" />
+    <script>
+      var bflat2 = new Audio();
+      bflat2.src =
+        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/syt.ogg";
+      function PlaySound1() {
+        bflat2.load();
+        bflat2.play();
+      }
+    </script>
+
+ 
+    <script>
+      var bflat3 = new Audio();
+      bflat3.src =
+        "https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fsound%2022.wav?v=1596003626717";
+      function PlaySound3() {
+        bflat3.play();
+      }
+    </script>
+    <script>
+      var bflat = new Audio();
+      bflat.src =
+        "https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg";
+      function PlaySound() {
+        bflat.load();
+        bflat.play();
+      }
+    </script>
+    <audio
+      id="bflat"
+      src="https://cloud-cube.s3.amazonaws.com/m660o440l0wv/public/sysse_ok.ogg"
+    ></audio>
+  </head>
+  <body>
+    <div class="header">
+      <center>
+        <img
+          src="https://cdn.glitch.com/7dbf6763-6e4a-4039-97a3-0612137943f7%2F73d4eeed-1a4f-4359-87af-e41ff5aa986d.image.png?v=1606955562675"
+          onmouseover="PlaySound1()"
+          onclick="PlaySound()"
+          title="arras.io"
+          class="icon"
+          alt="arras icon"
+        />
+      </center>
+      <h1>Arrasian.io</h1>
+    </div>
+    <div class="topnav">
+      <a href="/play.html">Play</a>
+      <a href="/changelog.html">Changelog</a>
+      <a href="https://woomy-arras.io/">Woomy-arras.io</a>
+      <a href="https://arras-mayhem.glitch.me">Arras Mayhem</a>
+            <a href="https://dexamenes.surge.sh/">Dexamenes.io</a>
+      <a href="https://exatank-io.netlify.app/">Exatank.io</a>
+    </div>
+    <div class="row">
+      <div class="card">
+        <h2>About</h2>
+        <h5>
+          Welcome to Arrasian.io,  Have fun with our many gamemodes and pets. Not included in Boss rush
+        </h5>
+      </div>
+       <div class="card">
+        <h2>The NPCs</h2>
+        <h5>
+         AI contolled tanks that may or may not try to kill you.
+        </h5>
+      <h4>
+    Bot
+        </h4>
+    <h5>Not the smartest of tanks, but can pack a punch. Bots on your team won't attack you, use this to your advantage! </h5>
+<img src="https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fscreenshot%20(2)%20(1).png?v=1603172351176" onclick="PlaySound()" class="center" onmouseover="PlaySound1()"  width="300" height="300" title="Come on. Come and have a go, pal. I dare you!">
+
+
+
+
+   <h4>
+    Dominator
+        </h4>
+ <h5>Stationary tank that can be captured and be made to fight alongside your team. Be wary though, enemies can capture your Dominator at any time!</h5>
+<img src="https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fscreenshot%20(4)%20(1).png?v=1603173005075" onclick="PlaySound()" class="center" onmouseover="PlaySound1()"   width="300" height="300" title="The big one">
+
+
+   <h4>
+    Base
+        </h4>
+ <h5>Invincible tank that can be found at spawn points/bases. Makes quick work of any enemy tanks willing to lock eyes with it. </h5>
+<img src="https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fimage%20(3).png?v=1603172225742" onclick="PlaySound()" onmouseover="PlaySound1()" class="center"  width="300" height="300" title="The big bad">
+
+   <h4>
+    Crasher
+        </h4>
+ <h5>Barely a threat on their own, but large numbers will pose a great challenge. </h5>
+<img src="https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fscreenshot%20(5)%20(1).png?v=1603173223087" onclick="PlaySound()" class="center" onmouseover="PlaySound1()"  width="300" height="300" title="The arras.io equivalent of a mosquito">
+
+
+   <h4>
+    Sentry
+        </h4>
+   <h5>Occasionally found in place of a crasher, they will vary in power based on what weapon they're carrying. </h5>
+<img src="https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fscreenshot%20(8)%20(1).png?v=1603174355469" onclick="PlaySound()" class="center" onmouseover="PlaySound1()"  width="300" height="300" title="Buff mosquito">
+   <h4>
+    Boss
+        </h4>
+   <h5>Originally quite weak, they've been buffed in this iteration of arras.io. Oh, did I mention they're a lot more "intimidating"?  </h5>
+<img src="https://cdn.glitch.com/fca666a2-8235-47b6-a711-c9926dc2248f%2Fscreenshot%20(7)%20(1).png?v=1603173739416" onclick="PlaySound()" class="center" onmouseover="PlaySound1()"  width="300" height="300" title="spin to team">
+      </div>
+    </div>
+    <div class="sticker-container left">
+      <div class="sticker">
+        <img
+          src="https://cdn.glitch.com/dd930f2e-3b2b-4799-a3cd-e67555a165f5%2Farras%20(13)%20(1).png?v=1610272769066"
+          onmouseover="PlaySound1()"
+          onclick="PlaySound()"
+          title="red machine gun"
+        />
+      </div>
+      <div class="sticker">
+        <img
+          src="https://cdn.glitch.com/dd930f2e-3b2b-4799-a3cd-e67555a165f5%2Farras%20(11)%20(1).png?v=1610270307017"
+          onmouseover="PlaySound1()"
+          onclick="PlaySound()"
+          title="blue twin"
+        />
+      </div>
+    </div>
+    <div class="sticker-container right">
+      <div class="sticker">
+        <img
+          src="https://cdn.glitch.com/dd930f2e-3b2b-4799-a3cd-e67555a165f5%2Farras%20(12)%20(1).png?v=1610270649739"
+          onmouseover="PlaySound1()"
+          onclick="PlaySound()"
+          title="green pounder"
+        />
+      </div>
+      <div class="sticker">
+        <img
+          src="https://cdn.glitch.com/dd930f2e-3b2b-4799-a3cd-e67555a165f5%2Farras%20(10)%20(1).png?v=1610269089121"
+          onmouseover="PlaySound1()"
+          onclick="PlaySound()"
+          title="purple basic"
+        />
+      </div>
+    </div>
+  </body>
+</html>
